@@ -34,8 +34,7 @@
             dialogueLbl3 = new Label();
             dialogueLbl4 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            linkLabel1 = new LinkLabel();
+            customRecipeToolsButton = new Button();
             SuspendLayout();
             // 
             // logoLbl
@@ -94,33 +93,21 @@
             button1.Text = "Find me a recipe";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // customRecipeToolsButton
             // 
-            button2.Location = new Point(310, 228);
-            button2.Name = "button2";
-            button2.Size = new Size(174, 29);
-            button2.TabIndex = 6;
-            button2.Text = "Custom recipe tools";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(77, 274);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(76, 20);
-            linkLabel1.TabIndex = 7;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "linkLabel1";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            customRecipeToolsButton.Location = new Point(310, 228);
+            customRecipeToolsButton.Name = "customRecipeToolsButton";
+            customRecipeToolsButton.Size = new Size(174, 29);
+            customRecipeToolsButton.TabIndex = 6;
+            customRecipeToolsButton.Text = "Custom recipe tools";
+            customRecipeToolsButton.UseVisualStyleBackColor = true;
             // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 303);
-            Controls.Add(linkLabel1);
-            Controls.Add(button2);
+            Controls.Add(customRecipeToolsButton);
             Controls.Add(button1);
             Controls.Add(dialogueLbl4);
             Controls.Add(dialogueLbl3);
@@ -141,7 +128,6 @@
         private Label dialogueLbl3;
         private Label dialogueLbl4;
         private Button button1;
-        private Button button2;
-        private LinkLabel linkLabel1;
+        private Button customRecipeToolsButton;
     }
 }

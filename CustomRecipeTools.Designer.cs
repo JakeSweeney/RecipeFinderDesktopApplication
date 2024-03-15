@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            logoLbl = new Label();
             returnHomeButton = new Button();
             recipeAdditionBox = new GroupBox();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            noWebLinkBox = new CheckBox();
-            textBox3 = new TextBox();
-            nameTheRecipeLbl = new Label();
+            weblinkPromptLbl = new Label();
+            weblinkBox = new TextBox();
+            noWeblinkBox = new CheckBox();
+            recipeNameBox = new TextBox();
+            recipeNameLbl = new Label();
             label3 = new Label();
             label2 = new Label();
             addIngredientButton = new Button();
-            textBox2 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
-            checkBox13 = new CheckBox();
-            checkBox12 = new CheckBox();
-            checkBox11 = new CheckBox();
-            checkBox10 = new CheckBox();
-            checkBox9 = new CheckBox();
-            checkBox8 = new CheckBox();
-            checkBox7 = new CheckBox();
-            checkBox6 = new CheckBox();
-            checkBox5 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
-            recipeNameLbl = new Label();
+            ingredientQuantityBox = new TextBox();
+            ingredientSelectComboBox = new ComboBox();
+            ingredientListDisplayBox = new TextBox();
+            sulphurDioxideCheckBox = new CheckBox();
+            soyaCheckBox = new CheckBox();
+            sesameCheckBox = new CheckBox();
+            peanutsCheckBox = new CheckBox();
+            nutsCheckBox = new CheckBox();
+            mustardCheckBox = new CheckBox();
+            molluscsCheckBox = new CheckBox();
+            milkCheckBox = new CheckBox();
+            fishCheckBox = new CheckBox();
+            eggsCheckBox = new CheckBox();
+            crustaceansCheckBox = new CheckBox();
+            glutenCheckBox = new CheckBox();
+            celeryCheckBox = new CheckBox();
+            addRecipeButton = new Button();
+            recipeAllergenPromptLbl = new Label();
             recipeRemovalBox = new GroupBox();
-            button2 = new Button();
-            textBox5 = new TextBox();
-            label5 = new Label();
+            removeRecipeButton = new Button();
+            recipeRemovalNameBox = new TextBox();
+            recipeRemovalNameLbl = new Label();
             groupBox3 = new GroupBox();
             taskStatusLbl = new Label();
             recipeAdditionBox.SuspendLayout();
@@ -68,16 +68,16 @@
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // logoLbl
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ControlLight;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Location = new Point(12, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(126, 22);
-            label1.TabIndex = 0;
-            label1.Text = "Choose My Food!";
+            logoLbl.AutoSize = true;
+            logoLbl.BackColor = SystemColors.ControlLight;
+            logoLbl.BorderStyle = BorderStyle.FixedSingle;
+            logoLbl.Location = new Point(12, 9);
+            logoLbl.Name = "logoLbl";
+            logoLbl.Size = new Size(126, 22);
+            logoLbl.TabIndex = 0;
+            logoLbl.Text = "Choose My Food!";
             // 
             // returnHomeButton
             // 
@@ -87,35 +87,36 @@
             returnHomeButton.TabIndex = 1;
             returnHomeButton.Text = "Return Home";
             returnHomeButton.UseVisualStyleBackColor = true;
+            returnHomeButton.Click += returnHomeButton_Click;
             // 
             // recipeAdditionBox
             // 
-            recipeAdditionBox.Controls.Add(label4);
-            recipeAdditionBox.Controls.Add(textBox4);
-            recipeAdditionBox.Controls.Add(noWebLinkBox);
-            recipeAdditionBox.Controls.Add(textBox3);
-            recipeAdditionBox.Controls.Add(nameTheRecipeLbl);
+            recipeAdditionBox.Controls.Add(weblinkPromptLbl);
+            recipeAdditionBox.Controls.Add(weblinkBox);
+            recipeAdditionBox.Controls.Add(noWeblinkBox);
+            recipeAdditionBox.Controls.Add(recipeNameBox);
+            recipeAdditionBox.Controls.Add(recipeNameLbl);
             recipeAdditionBox.Controls.Add(label3);
             recipeAdditionBox.Controls.Add(label2);
             recipeAdditionBox.Controls.Add(addIngredientButton);
-            recipeAdditionBox.Controls.Add(textBox2);
-            recipeAdditionBox.Controls.Add(comboBox1);
-            recipeAdditionBox.Controls.Add(textBox1);
-            recipeAdditionBox.Controls.Add(checkBox13);
-            recipeAdditionBox.Controls.Add(checkBox12);
-            recipeAdditionBox.Controls.Add(checkBox11);
-            recipeAdditionBox.Controls.Add(checkBox10);
-            recipeAdditionBox.Controls.Add(checkBox9);
-            recipeAdditionBox.Controls.Add(checkBox8);
-            recipeAdditionBox.Controls.Add(checkBox7);
-            recipeAdditionBox.Controls.Add(checkBox6);
-            recipeAdditionBox.Controls.Add(checkBox5);
-            recipeAdditionBox.Controls.Add(checkBox4);
-            recipeAdditionBox.Controls.Add(checkBox3);
-            recipeAdditionBox.Controls.Add(checkBox2);
-            recipeAdditionBox.Controls.Add(checkBox1);
-            recipeAdditionBox.Controls.Add(button1);
-            recipeAdditionBox.Controls.Add(recipeNameLbl);
+            recipeAdditionBox.Controls.Add(ingredientQuantityBox);
+            recipeAdditionBox.Controls.Add(ingredientSelectComboBox);
+            recipeAdditionBox.Controls.Add(ingredientListDisplayBox);
+            recipeAdditionBox.Controls.Add(sulphurDioxideCheckBox);
+            recipeAdditionBox.Controls.Add(soyaCheckBox);
+            recipeAdditionBox.Controls.Add(sesameCheckBox);
+            recipeAdditionBox.Controls.Add(peanutsCheckBox);
+            recipeAdditionBox.Controls.Add(nutsCheckBox);
+            recipeAdditionBox.Controls.Add(mustardCheckBox);
+            recipeAdditionBox.Controls.Add(molluscsCheckBox);
+            recipeAdditionBox.Controls.Add(milkCheckBox);
+            recipeAdditionBox.Controls.Add(fishCheckBox);
+            recipeAdditionBox.Controls.Add(eggsCheckBox);
+            recipeAdditionBox.Controls.Add(crustaceansCheckBox);
+            recipeAdditionBox.Controls.Add(glutenCheckBox);
+            recipeAdditionBox.Controls.Add(celeryCheckBox);
+            recipeAdditionBox.Controls.Add(addRecipeButton);
+            recipeAdditionBox.Controls.Add(recipeAllergenPromptLbl);
             recipeAdditionBox.Location = new Point(12, 34);
             recipeAdditionBox.Name = "recipeAdditionBox";
             recipeAdditionBox.Size = new Size(503, 444);
@@ -123,48 +124,48 @@
             recipeAdditionBox.TabStop = false;
             recipeAdditionBox.Text = "Recipe Addition Tool";
             // 
-            // label4
+            // weblinkPromptLbl
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 350);
-            label4.Name = "label4";
-            label4.Size = new Size(113, 20);
-            label4.TabIndex = 25;
-            label4.Text = "Enter a weblink:";
+            weblinkPromptLbl.AutoSize = true;
+            weblinkPromptLbl.Location = new Point(6, 350);
+            weblinkPromptLbl.Name = "weblinkPromptLbl";
+            weblinkPromptLbl.Size = new Size(113, 20);
+            weblinkPromptLbl.TabIndex = 25;
+            weblinkPromptLbl.Text = "Enter a weblink:";
             // 
-            // textBox4
+            // weblinkBox
             // 
-            textBox4.Location = new Point(119, 350);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(369, 27);
-            textBox4.TabIndex = 24;
+            weblinkBox.Location = new Point(119, 350);
+            weblinkBox.Name = "weblinkBox";
+            weblinkBox.Size = new Size(369, 27);
+            weblinkBox.TabIndex = 24;
             // 
-            // noWebLinkBox
+            // noWeblinkBox
             // 
-            noWebLinkBox.AutoSize = true;
-            noWebLinkBox.Location = new Point(6, 383);
-            noWebLinkBox.Name = "noWebLinkBox";
-            noWebLinkBox.Size = new Size(198, 24);
-            noWebLinkBox.TabIndex = 23;
-            noWebLinkBox.Text = "Tick if there is no weblink";
-            noWebLinkBox.UseVisualStyleBackColor = true;
-            noWebLinkBox.CheckedChanged += noWebLinkBox_CheckedChanged;
+            noWeblinkBox.AutoSize = true;
+            noWeblinkBox.Location = new Point(6, 383);
+            noWeblinkBox.Name = "noWeblinkBox";
+            noWeblinkBox.Size = new Size(198, 24);
+            noWeblinkBox.TabIndex = 23;
+            noWeblinkBox.Text = "Tick if there is no weblink";
+            noWeblinkBox.UseVisualStyleBackColor = true;
+            noWeblinkBox.CheckedChanged += noWebLinkBox_CheckedChanged;
             // 
-            // textBox3
+            // recipeNameBox
             // 
-            textBox3.Location = new Point(177, 30);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(311, 27);
-            textBox3.TabIndex = 22;
+            recipeNameBox.Location = new Point(177, 30);
+            recipeNameBox.Name = "recipeNameBox";
+            recipeNameBox.Size = new Size(311, 27);
+            recipeNameBox.TabIndex = 22;
             // 
-            // nameTheRecipeLbl
+            // recipeNameLbl
             // 
-            nameTheRecipeLbl.AutoSize = true;
-            nameTheRecipeLbl.Location = new Point(5, 30);
-            nameTheRecipeLbl.Name = "nameTheRecipeLbl";
-            nameTheRecipeLbl.Size = new Size(166, 20);
-            nameTheRecipeLbl.TabIndex = 21;
-            nameTheRecipeLbl.Text = "Enter the recipe's name:";
+            recipeNameLbl.AutoSize = true;
+            recipeNameLbl.Location = new Point(5, 30);
+            recipeNameLbl.Name = "recipeNameLbl";
+            recipeNameLbl.Size = new Size(166, 20);
+            recipeNameLbl.TabIndex = 21;
+            recipeNameLbl.Text = "Enter the recipe's name:";
             // 
             // label3
             // 
@@ -193,183 +194,184 @@
             addIngredientButton.Text = "Add ingredient";
             addIngredientButton.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // ingredientQuantityBox
             // 
-            textBox2.Location = new Point(162, 206);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(196, 27);
-            textBox2.TabIndex = 17;
+            ingredientQuantityBox.Location = new Point(162, 206);
+            ingredientQuantityBox.Name = "ingredientQuantityBox";
+            ingredientQuantityBox.Size = new Size(196, 27);
+            ingredientQuantityBox.TabIndex = 17;
             // 
-            // comboBox1
+            // ingredientSelectComboBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Cream", "Whipped cream", "Sour cream", "Double cream", "Yoghurt", "Milk", "Condensed milk", "Evapourated milk", "Buttermilk", "Egg", "Cheese", "Butter", "Custard", "Margerine", "Sunflower oil", "Canola oil", "Vegetable oil", "Peanut oil", "Rapeseed oil", "Mustard oil", "Sunflower oil", "Olive oil", "Coconut oil", "Sesame oil", "Orange", "Lemon", "Mango", "Apple", "Blueberrie", "Raspberrie", "Strawberrie", "Cranberrie", "Kiwi", "Banana", "Watermelon", "Tomato", "Water Chestnut", "Papaya", "Olive", "Pear", "Sultana", "Mulberry", "Lychee", "Raisins", "Jamun", "Tamarind", "Gooseberry", "Grapefruit", "Dates", "Custard apple", "Black currant", "Red currant", "Coconut", "Cherry", "Apricot", "Figs", "Pomegranate", "Grapes", "Pineapple", "Guava", "Plum", "Bok choy", "Green bean", "Sorrel leaf", "Rocket leaf", "Plantain", "Turnip", "Sweet potatoes", "Round gourd", "Pimento", "Spinach", "Brown onion", "Red onion", "Spring onion", "Shallot", "Mustard leaf", "Mushroom", "Radish", "Lettuce", "Leek", "Pumpkin", "Yam", "Jalapeno", "Jackfruit", "Horseradish", "Peas", "Chilli", "Gherkin", "Garlic", "Fenugreek", "Cucumber", "Courgette", "Aubergine", "Corn cob", "Baby corn", "Mushroom", "Celery", "Cauliflower", "Carrot", "Green bell pepper", "Yellow bell pepper", "Orange bell pepper", "Red bell pepper", "Capers", "Broccoli", "Broad bean", "Bottle gourd", "Bitter gourd", "Lotus stem", "Beetroot", "Pigweed", "Cabbage", "Bamboo shoot", "Avocado", "Asparagus", "Arichoke", "Taro", "Potato", "Ginger", "Coriander ", "Chive", "Galangal", "Tulsi", "Sage", "Rosemary", "Basil", "Mint", "Chives", "Chilli powder", "Oregano", "Nasturtium", "Salt", "Mustard", "Paprika", "Marjoram", "Lemongrass", "Saffron", "Dried fenugreek", "Fenugreek seed", "Kashmiri Mirch", "Onion seed", "Mace", "Nutmeg", "Mixed herbs", "Thyme", "Tumeric", "Garam masala", "Five spice", "Fennel", "Green Cardamom", "Dried ginger", "Dill", "Curry leaf", "Cumin seeds", "Black cumin", "Bay leaf", "Clove", "Cinnamon", "Star anise", "Cayenne", "Caraway seed", "Cajun spice", "Rock salt", "Black pepper", "Black Cardamom", "Asafoetida", "Aniseed", "Raw mango powder", "Carom seed", "Parsley", "Acacia leaf", "Amaranth", "Flour", "Muesli", "Oat", "Jowar", "Brown rice", "Long grain brown rice", "White rice", "Long grain white rice", "Pilau rice", "Basmati rice", "White jasmine rice", "Puffed rice", "Arborio rice", "Tapioca", "Semolina", "Millet", "Wheat", "Buckwheat", "Kidney bean", "Gram", "Gram flour", "Chickpea", "Lentil", "Cous-cous", "Cornmeal", "Bread", "Bread crumb", "Bean", "Barley", "Bean Sprout", "Beef", "Chicken", "Turkey", "Pork", "Bacon", "Lamb", "Partridge", "Quail", "Mutton", "Meat stock", "Keema", "Mincemeat", "Sausages", "Black pudding", "Liver", "Ham", "Breast steak", "Thigh steak", "Rump steak", "Kidney", "Crab", "Chop", "Shrimp", "Fish", "Fish stock", "Tuna", "Pate", "Shellfish", "Shark", "Hilsa", "Sardine", "Salmon", "Prawn", "Pomfret", "Mussel", "Mullet", "Squid", "Haddock", "Flounder", "Caviar", "Cuttlel fish", "Cod", "Clam", "Catfish", "Mackerel", "Anchovie", "Chia seed", "Hazelnut", "Pine nut", "Sunflower seed", "Pistachio", "Mustard seed", "Sesame seed", "Peanut", "Chironji", "Cashew nut", "Almond", "Walnut", "Brown sugar", "White sugar", "Cane sugar", "Castor sugar", "Caramel", "Artificial sweetener", "Icing sugar", "Food dye", "Crystallised sugar lumps", "Honey", "Jaggery", "Golden syrup" });
-            comboBox1.Location = new Point(5, 207);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 16;
+            ingredientSelectComboBox.FormattingEnabled = true;
+            ingredientSelectComboBox.Items.AddRange(new object[] { "Cream", "Whipped cream", "Sour cream", "Double cream", "Yoghurt", "Milk", "Condensed milk", "Evapourated milk", "Buttermilk", "Egg", "Cheese", "Butter", "Custard", "Margerine", "Sunflower oil", "Canola oil", "Vegetable oil", "Peanut oil", "Rapeseed oil", "Mustard oil", "Sunflower oil", "Olive oil", "Coconut oil", "Sesame oil", "Orange", "Lemon", "Mango", "Apple", "Blueberrie", "Raspberrie", "Strawberrie", "Cranberrie", "Kiwi", "Banana", "Watermelon", "Tomato", "Water Chestnut", "Papaya", "Olive", "Pear", "Sultana", "Mulberry", "Lychee", "Raisins", "Jamun", "Tamarind", "Gooseberry", "Grapefruit", "Dates", "Custard apple", "Black currant", "Red currant", "Coconut", "Cherry", "Apricot", "Figs", "Pomegranate", "Grapes", "Pineapple", "Guava", "Plum", "Bok choy", "Green bean", "Sorrel leaf", "Rocket leaf", "Plantain", "Turnip", "Sweet potatoes", "Round gourd", "Pimento", "Spinach", "Brown onion", "Red onion", "Spring onion", "Shallot", "Mustard leaf", "Mushroom", "Radish", "Lettuce", "Leek", "Pumpkin", "Yam", "Jalapeno", "Jackfruit", "Horseradish", "Peas", "Chilli", "Gherkin", "Garlic", "Fenugreek", "Cucumber", "Courgette", "Aubergine", "Corn cob", "Baby corn", "Mushroom", "Celery", "Cauliflower", "Carrot", "Green bell pepper", "Yellow bell pepper", "Orange bell pepper", "Red bell pepper", "Capers", "Broccoli", "Broad bean", "Bottle gourd", "Bitter gourd", "Lotus stem", "Beetroot", "Pigweed", "Cabbage", "Bamboo shoot", "Avocado", "Asparagus", "Arichoke", "Taro", "Potato", "Ginger", "Coriander ", "Chive", "Galangal", "Tulsi", "Sage", "Rosemary", "Basil", "Mint", "Chives", "Chilli powder", "Oregano", "Nasturtium", "Salt", "Mustard", "Paprika", "Marjoram", "Lemongrass", "Saffron", "Dried fenugreek", "Fenugreek seed", "Kashmiri Mirch", "Onion seed", "Mace", "Nutmeg", "Mixed herbs", "Thyme", "Tumeric", "Garam masala", "Five spice", "Fennel", "Green Cardamom", "Dried ginger", "Dill", "Curry leaf", "Cumin seeds", "Black cumin", "Bay leaf", "Clove", "Cinnamon", "Star anise", "Cayenne", "Caraway seed", "Cajun spice", "Rock salt", "Black pepper", "Black Cardamom", "Asafoetida", "Aniseed", "Raw mango powder", "Carom seed", "Parsley", "Acacia leaf", "Amaranth", "Flour", "Muesli", "Oat", "Jowar", "Brown rice", "Long grain brown rice", "White rice", "Long grain white rice", "Pilau rice", "Basmati rice", "White jasmine rice", "Puffed rice", "Arborio rice", "Tapioca", "Semolina", "Millet", "Wheat", "Buckwheat", "Kidney bean", "Gram", "Gram flour", "Chickpea", "Lentil", "Cous-cous", "Cornmeal", "Bread", "Bread crumb", "Bean", "Barley", "Bean Sprout", "Beef", "Chicken", "Turkey", "Pork", "Bacon", "Lamb", "Partridge", "Quail", "Mutton", "Meat stock", "Keema", "Mincemeat", "Sausages", "Black pudding", "Liver", "Ham", "Breast steak", "Thigh steak", "Rump steak", "Kidney", "Crab", "Chop", "Shrimp", "Fish", "Fish stock", "Tuna", "Pate", "Shellfish", "Shark", "Hilsa", "Sardine", "Salmon", "Prawn", "Pomfret", "Mussel", "Mullet", "Squid", "Haddock", "Flounder", "Caviar", "Cuttlel fish", "Cod", "Clam", "Catfish", "Mackerel", "Anchovie", "Chia seed", "Hazelnut", "Pine nut", "Sunflower seed", "Pistachio", "Mustard seed", "Sesame seed", "Peanut", "Chironji", "Cashew nut", "Almond", "Walnut", "Brown sugar", "White sugar", "Cane sugar", "Castor sugar", "Caramel", "Artificial sweetener", "Icing sugar", "Food dye", "Crystallised sugar lumps", "Honey", "Jaggery", "Golden syrup" });
+            ingredientSelectComboBox.Location = new Point(5, 207);
+            ingredientSelectComboBox.Name = "ingredientSelectComboBox";
+            ingredientSelectComboBox.Size = new Size(151, 28);
+            ingredientSelectComboBox.TabIndex = 16;
             // 
-            // textBox1
+            // ingredientListDisplayBox
             // 
-            textBox1.Location = new Point(5, 241);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(483, 96);
-            textBox1.TabIndex = 15;
+            ingredientListDisplayBox.Location = new Point(5, 241);
+            ingredientListDisplayBox.Multiline = true;
+            ingredientListDisplayBox.Name = "ingredientListDisplayBox";
+            ingredientListDisplayBox.ReadOnly = true;
+            ingredientListDisplayBox.Size = new Size(483, 96);
+            ingredientListDisplayBox.TabIndex = 15;
             // 
-            // checkBox13
+            // sulphurDioxideCheckBox
             // 
-            checkBox13.AutoSize = true;
-            checkBox13.Location = new Point(200, 152);
-            checkBox13.Name = "checkBox13";
-            checkBox13.Size = new Size(131, 24);
-            checkBox13.TabIndex = 14;
-            checkBox13.Text = "Suphur dioxide";
-            checkBox13.UseVisualStyleBackColor = true;
+            sulphurDioxideCheckBox.AutoSize = true;
+            sulphurDioxideCheckBox.Location = new Point(200, 152);
+            sulphurDioxideCheckBox.Name = "sulphurDioxideCheckBox";
+            sulphurDioxideCheckBox.Size = new Size(135, 24);
+            sulphurDioxideCheckBox.TabIndex = 14;
+            sulphurDioxideCheckBox.Text = "Sulphur dioxide";
+            sulphurDioxideCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox12
+            // soyaCheckBox
             // 
-            checkBox12.AutoSize = true;
-            checkBox12.Location = new Point(131, 152);
-            checkBox12.Name = "checkBox12";
-            checkBox12.Size = new Size(63, 24);
-            checkBox12.TabIndex = 13;
-            checkBox12.Text = "Soya";
-            checkBox12.UseVisualStyleBackColor = true;
+            soyaCheckBox.AutoSize = true;
+            soyaCheckBox.Location = new Point(131, 152);
+            soyaCheckBox.Name = "soyaCheckBox";
+            soyaCheckBox.Size = new Size(63, 24);
+            soyaCheckBox.TabIndex = 13;
+            soyaCheckBox.Text = "Soya";
+            soyaCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox11
+            // sesameCheckBox
             // 
-            checkBox11.AutoSize = true;
-            checkBox11.Location = new Point(5, 152);
-            checkBox11.Name = "checkBox11";
-            checkBox11.Size = new Size(123, 24);
-            checkBox11.TabIndex = 12;
-            checkBox11.Text = "Sesame seeds";
-            checkBox11.UseVisualStyleBackColor = true;
+            sesameCheckBox.AutoSize = true;
+            sesameCheckBox.Location = new Point(5, 152);
+            sesameCheckBox.Name = "sesameCheckBox";
+            sesameCheckBox.Size = new Size(123, 24);
+            sesameCheckBox.TabIndex = 12;
+            sesameCheckBox.Text = "Sesame seeds";
+            sesameCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox10
+            // peanutsCheckBox
             // 
-            checkBox10.AutoSize = true;
-            checkBox10.Location = new Point(386, 122);
-            checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(81, 24);
-            checkBox10.TabIndex = 11;
-            checkBox10.Text = "Peanuts";
-            checkBox10.UseVisualStyleBackColor = true;
+            peanutsCheckBox.AutoSize = true;
+            peanutsCheckBox.Location = new Point(386, 122);
+            peanutsCheckBox.Name = "peanutsCheckBox";
+            peanutsCheckBox.Size = new Size(81, 24);
+            peanutsCheckBox.TabIndex = 11;
+            peanutsCheckBox.Text = "Peanuts";
+            peanutsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // nutsCheckBox
             // 
-            checkBox9.AutoSize = true;
-            checkBox9.Location = new Point(316, 122);
-            checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(61, 24);
-            checkBox9.TabIndex = 10;
-            checkBox9.Text = "Nuts";
-            checkBox9.UseVisualStyleBackColor = true;
+            nutsCheckBox.AutoSize = true;
+            nutsCheckBox.Location = new Point(316, 122);
+            nutsCheckBox.Name = "nutsCheckBox";
+            nutsCheckBox.Size = new Size(61, 24);
+            nutsCheckBox.TabIndex = 10;
+            nutsCheckBox.Text = "Nuts";
+            nutsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // mustardCheckBox
             // 
-            checkBox8.AutoSize = true;
-            checkBox8.Location = new Point(225, 122);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(85, 24);
-            checkBox8.TabIndex = 9;
-            checkBox8.Text = "Mustard";
-            checkBox8.UseVisualStyleBackColor = true;
+            mustardCheckBox.AutoSize = true;
+            mustardCheckBox.Location = new Point(225, 122);
+            mustardCheckBox.Name = "mustardCheckBox";
+            mustardCheckBox.Size = new Size(85, 24);
+            mustardCheckBox.TabIndex = 9;
+            mustardCheckBox.Text = "Mustard";
+            mustardCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // molluscsCheckBox
             // 
-            checkBox7.AutoSize = true;
-            checkBox7.Location = new Point(131, 122);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(88, 24);
-            checkBox7.TabIndex = 8;
-            checkBox7.Text = "Molluscs";
-            checkBox7.UseVisualStyleBackColor = true;
+            molluscsCheckBox.AutoSize = true;
+            molluscsCheckBox.Location = new Point(131, 122);
+            molluscsCheckBox.Name = "molluscsCheckBox";
+            molluscsCheckBox.Size = new Size(88, 24);
+            molluscsCheckBox.TabIndex = 8;
+            molluscsCheckBox.Text = "Molluscs";
+            molluscsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // milkCheckBox
             // 
-            checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(66, 122);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(59, 24);
-            checkBox6.TabIndex = 7;
-            checkBox6.Text = "Milk";
-            checkBox6.UseVisualStyleBackColor = true;
+            milkCheckBox.AutoSize = true;
+            milkCheckBox.Location = new Point(66, 122);
+            milkCheckBox.Name = "milkCheckBox";
+            milkCheckBox.Size = new Size(59, 24);
+            milkCheckBox.TabIndex = 7;
+            milkCheckBox.Text = "Milk";
+            milkCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // fishCheckBox
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(5, 122);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(56, 24);
-            checkBox5.TabIndex = 6;
-            checkBox5.Text = "Fish";
-            checkBox5.UseVisualStyleBackColor = true;
+            fishCheckBox.AutoSize = true;
+            fishCheckBox.Location = new Point(5, 122);
+            fishCheckBox.Name = "fishCheckBox";
+            fishCheckBox.Size = new Size(56, 24);
+            fishCheckBox.TabIndex = 6;
+            fishCheckBox.Text = "Fish";
+            fishCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // eggsCheckBox
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(404, 92);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(63, 24);
-            checkBox4.TabIndex = 5;
-            checkBox4.Text = "Eggs";
-            checkBox4.UseVisualStyleBackColor = true;
+            eggsCheckBox.AutoSize = true;
+            eggsCheckBox.Location = new Point(404, 92);
+            eggsCheckBox.Name = "eggsCheckBox";
+            eggsCheckBox.Size = new Size(63, 24);
+            eggsCheckBox.TabIndex = 5;
+            eggsCheckBox.Text = "Eggs";
+            eggsCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // crustaceansCheckBox
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(289, 92);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(109, 24);
-            checkBox3.TabIndex = 4;
-            checkBox3.Text = "Crustaceans";
-            checkBox3.UseVisualStyleBackColor = true;
+            crustaceansCheckBox.AutoSize = true;
+            crustaceansCheckBox.Location = new Point(289, 92);
+            crustaceansCheckBox.Name = "crustaceansCheckBox";
+            crustaceansCheckBox.Size = new Size(109, 24);
+            crustaceansCheckBox.TabIndex = 4;
+            crustaceansCheckBox.Text = "Crustaceans";
+            crustaceansCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // glutenCheckBox
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(84, 92);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(199, 24);
-            checkBox2.TabIndex = 3;
-            checkBox2.Text = "Cereals containing gluten";
-            checkBox2.UseVisualStyleBackColor = true;
+            glutenCheckBox.AutoSize = true;
+            glutenCheckBox.Location = new Point(84, 92);
+            glutenCheckBox.Name = "glutenCheckBox";
+            glutenCheckBox.Size = new Size(199, 24);
+            glutenCheckBox.TabIndex = 3;
+            glutenCheckBox.Text = "Cereals containing gluten";
+            glutenCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // celeryCheckBox
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(6, 92);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(72, 24);
-            checkBox1.TabIndex = 2;
-            checkBox1.Text = "Celery";
-            checkBox1.UseVisualStyleBackColor = true;
+            celeryCheckBox.AutoSize = true;
+            celeryCheckBox.Location = new Point(6, 92);
+            celeryCheckBox.Name = "celeryCheckBox";
+            celeryCheckBox.Size = new Size(72, 24);
+            celeryCheckBox.TabIndex = 2;
+            celeryCheckBox.Text = "Celery";
+            celeryCheckBox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // addRecipeButton
             // 
-            button1.Location = new Point(5, 409);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 1;
-            button1.Text = "Add recipe";
-            button1.UseVisualStyleBackColor = true;
+            addRecipeButton.Location = new Point(5, 409);
+            addRecipeButton.Name = "addRecipeButton";
+            addRecipeButton.Size = new Size(94, 29);
+            addRecipeButton.TabIndex = 1;
+            addRecipeButton.Text = "Add recipe";
+            addRecipeButton.UseVisualStyleBackColor = true;
             // 
-            // recipeNameLbl
+            // recipeAllergenPromptLbl
             // 
-            recipeNameLbl.AutoSize = true;
-            recipeNameLbl.Location = new Point(6, 69);
-            recipeNameLbl.Name = "recipeNameLbl";
-            recipeNameLbl.Size = new Size(371, 20);
-            recipeNameLbl.TabIndex = 0;
-            recipeNameLbl.Text = "Tick a box if the recipe contains one of these allergens:";
+            recipeAllergenPromptLbl.AutoSize = true;
+            recipeAllergenPromptLbl.Location = new Point(6, 69);
+            recipeAllergenPromptLbl.Name = "recipeAllergenPromptLbl";
+            recipeAllergenPromptLbl.Size = new Size(371, 20);
+            recipeAllergenPromptLbl.TabIndex = 0;
+            recipeAllergenPromptLbl.Text = "Tick a box if the recipe contains one of these allergens:";
             // 
             // recipeRemovalBox
             // 
-            recipeRemovalBox.Controls.Add(button2);
-            recipeRemovalBox.Controls.Add(textBox5);
-            recipeRemovalBox.Controls.Add(label5);
+            recipeRemovalBox.Controls.Add(removeRecipeButton);
+            recipeRemovalBox.Controls.Add(recipeRemovalNameBox);
+            recipeRemovalBox.Controls.Add(recipeRemovalNameLbl);
             recipeRemovalBox.Location = new Point(12, 497);
             recipeRemovalBox.Name = "recipeRemovalBox";
             recipeRemovalBox.Size = new Size(503, 110);
@@ -377,30 +379,30 @@
             recipeRemovalBox.TabStop = false;
             recipeRemovalBox.Text = "Recipe Removal Tool";
             // 
-            // button2
+            // removeRecipeButton
             // 
-            button2.Location = new Point(6, 66);
-            button2.Name = "button2";
-            button2.Size = new Size(119, 29);
-            button2.TabIndex = 2;
-            button2.Text = "Remove recipe";
-            button2.UseVisualStyleBackColor = true;
+            removeRecipeButton.Location = new Point(6, 66);
+            removeRecipeButton.Name = "removeRecipeButton";
+            removeRecipeButton.Size = new Size(119, 29);
+            removeRecipeButton.TabIndex = 2;
+            removeRecipeButton.Text = "Remove recipe";
+            removeRecipeButton.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // recipeRemovalNameBox
             // 
-            textBox5.Location = new Point(144, 32);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(344, 27);
-            textBox5.TabIndex = 1;
+            recipeRemovalNameBox.Location = new Point(144, 32);
+            recipeRemovalNameBox.Name = "recipeRemovalNameBox";
+            recipeRemovalNameBox.Size = new Size(344, 27);
+            recipeRemovalNameBox.TabIndex = 1;
             // 
-            // label5
+            // recipeRemovalNameLbl
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 32);
-            label5.Name = "label5";
-            label5.Size = new Size(132, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Enter recipe name:";
+            recipeRemovalNameLbl.AutoSize = true;
+            recipeRemovalNameLbl.Location = new Point(6, 32);
+            recipeRemovalNameLbl.Name = "recipeRemovalNameLbl";
+            recipeRemovalNameLbl.Size = new Size(132, 20);
+            recipeRemovalNameLbl.TabIndex = 0;
+            recipeRemovalNameLbl.Text = "Enter recipe name:";
             // 
             // groupBox3
             // 
@@ -430,7 +432,7 @@
             Controls.Add(recipeRemovalBox);
             Controls.Add(recipeAdditionBox);
             Controls.Add(returnHomeButton);
-            Controls.Add(label1);
+            Controls.Add(logoLbl);
             Name = "CustomRecipeTools";
             Text = "Custom Recipe Tools";
             recipeAdditionBox.ResumeLayout(false);
@@ -445,40 +447,40 @@
 
         #endregion
 
-        private Label label1;
+        private Label logoLbl;
         private Button returnHomeButton;
         private GroupBox recipeAdditionBox;
         private GroupBox recipeRemovalBox;
         private GroupBox groupBox3;
         private Label taskStatusLbl;
-        private Label recipeNameLbl;
-        private CheckBox checkBox1;
-        private Button button1;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox13;
-        private CheckBox checkBox12;
-        private CheckBox checkBox11;
-        private CheckBox checkBox10;
-        private CheckBox checkBox9;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
+        private Label recipeAllergenPromptLbl;
+        private CheckBox celeryCheckBox;
+        private Button addRecipeButton;
+        private CheckBox eggsCheckBox;
+        private CheckBox crustaceansCheckBox;
+        private CheckBox glutenCheckBox;
+        private CheckBox sulphurDioxideCheckBox;
+        private CheckBox soyaCheckBox;
+        private CheckBox sesameCheckBox;
+        private CheckBox peanutsCheckBox;
+        private CheckBox nutsCheckBox;
+        private CheckBox mustardCheckBox;
+        private CheckBox molluscsCheckBox;
+        private CheckBox milkCheckBox;
+        private CheckBox fishCheckBox;
         private Button addIngredientButton;
-        private TextBox textBox2;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private TextBox ingredientQuantityBox;
+        private ComboBox ingredientSelectComboBox;
+        private TextBox ingredientListDisplayBox;
         private Label label3;
         private Label label2;
-        private TextBox textBox3;
-        private Label nameTheRecipeLbl;
-        private Label label4;
-        private TextBox textBox4;
-        private CheckBox noWebLinkBox;
-        private Label label5;
-        private Button button2;
-        private TextBox textBox5;
+        private TextBox recipeNameBox;
+        private Label recipeNameLbl;
+        private Label weblinkPromptLbl;
+        private TextBox weblinkBox;
+        private CheckBox noWeblinkBox;
+        private Label recipeRemovalNameLbl;
+        private Button removeRecipeButton;
+        private TextBox recipeRemovalNameBox;
     }
 }

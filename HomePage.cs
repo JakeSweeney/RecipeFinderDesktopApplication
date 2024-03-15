@@ -27,7 +27,12 @@ namespace RecipeFinderPrototype
             fileopener.Start();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void customRecipeToolsButton_(object sender, EventArgs e)
+        {
+
+        }
+
+        /*private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var ps = new ProcessStartInfo("https://moodle.mmu.ac.uk/course/view.php?id=172062")
             {
@@ -35,7 +40,7 @@ namespace RecipeFinderPrototype
                 Verb = "open"
             };
             Process.Start(ps);
-        }
+        }*/
 
         /*private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
