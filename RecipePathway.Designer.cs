@@ -52,13 +52,13 @@
             taskStatusGroupBox = new GroupBox();
             taskStatusLbl = new Label();
             userFridgeGroupBox = new GroupBox();
-            ingredientNameLbl = new Label();
-            label2 = new Label();
-            ingredientQuantityLbl = new Label();
-            comboBox1 = new ComboBox();
-            ingredientQuantityBox = new TextBox();
-            ingredientListDisplay = new TextBox();
             addIngredientButton = new Button();
+            ingredientListDisplay = new TextBox();
+            ingredientQuantityBox = new TextBox();
+            comboBox1 = new ComboBox();
+            ingredientQuantityLbl = new Label();
+            label2 = new Label();
+            ingredientNameLbl = new Label();
             allergySelectionGroupBox.SuspendLayout();
             taskStatusGroupBox.SuspendLayout();
             userFridgeGroupBox.SuspendLayout();
@@ -72,6 +72,7 @@
             returnHomeButton.TabIndex = 0;
             returnHomeButton.Text = "Return Home";
             returnHomeButton.UseVisualStyleBackColor = true;
+            returnHomeButton.Click += returnHomeButton_Click;
             // 
             // logoLbl
             // 
@@ -320,47 +321,14 @@
             userFridgeGroupBox.TabStop = false;
             userFridgeGroupBox.Text = "Input ingredients you already have and their quantities (in grams):";
             // 
-            // ingredientNameLbl
+            // addIngredientButton
             // 
-            ingredientNameLbl.AutoSize = true;
-            ingredientNameLbl.Location = new Point(6, 35);
-            ingredientNameLbl.Name = "ingredientNameLbl";
-            ingredientNameLbl.Size = new Size(121, 20);
-            ingredientNameLbl.TabIndex = 0;
-            ingredientNameLbl.Text = "Ingredient name:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(156, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(0, 20);
-            label2.TabIndex = 1;
-            // 
-            // ingredientQuantityLbl
-            // 
-            ingredientQuantityLbl.AutoSize = true;
-            ingredientQuantityLbl.Location = new Point(162, 35);
-            ingredientQuantityLbl.Name = "ingredientQuantityLbl";
-            ingredientQuantityLbl.Size = new Size(209, 20);
-            ingredientQuantityLbl.TabIndex = 2;
-            ingredientQuantityLbl.Text = "Ingredient quantity (in grams):";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Cream", "Whipped cream", "Sour cream", "Double cream", "Yoghurt", "Milk", "Condensed milk", "Evapourated milk", "Buttermilk", "Egg", "Cheese", "Butter", "Custard", "Margerine", "Sunflower oil", "Canola oil", "Vegetable oil", "Peanut oil", "Rapeseed oil", "Mustard oil", "Sunflower oil", "Olive oil", "Coconut oil", "Sesame oil", "Orange", "Lemon", "Mango", "Apple", "Blueberry", "Raspberry", "Strawberry", "Cranberry", "Kiwi", "Banana", "Watermelon", "Tomato", "Water Chestnut", "Papaya", "Olive", "Pear", "Sultana", "Mulberry", "Lychee", "Raisins", "Jamun", "Tamarind", "Gooseberry", "Grapefruit", "Dates", "Custard apple", "Black currant", "Red currant", "Coconut", "Cherry", "Apricot", "Figs", "Pomegranate", "Grapes", "Pineapple", "Guava", "Plum", "Bok choy", "Green bean", "Sorrel leaf", "Rocket leaf", "Plantain", "Turnip", "Sweet potatoes", "Round gourd", "Pimento", "Spinach", "Brown onion", "Red onion", "Spring onion", "Shallot", "Mustard leaf", "Mushroom", "Radish", "Lettuce", "Leek", "Pumpkin", "Yam", "Jalapeno", "Jackfruit", "Horseradish", "Peas", "Chilli", "Gherkin", "Garlic", "Fenugreek", "Cucumber", "Courgette", "Aubergine", "Corn cob", "Baby corn", "Mushroom", "Celery", "Cauliflower", "Carrot", "Green bell pepper", "Yellow bell pepper", "Orange bell pepper", "Red bell pepper", "Capers", "Broccoli", "Broad bean", "Bottle gourd", "Bitter gourd", "Lotus stem", "Beetroot", "Pigweed", "Cabbage", "Bamboo shoot", "Avocado", "Asparagus", "Arichoke", "Taro", "Potato", "Ginger", "Coriander ", "Chive", "Galangal", "Tulsi", "Sage", "Rosemary", "Basil", "Mint", "Chives", "Chilli powder", "Oregano", "Nasturtium", "Salt", "Mustard", "Paprika", "Marjoram", "Lemongrass", "Saffron", "Dried fenugreek", "Fenugreek seed", "Kashmiri Mirch", "Onion seed", "Mace", "Nutmeg", "Mixed herbs", "Thyme", "Tumeric", "Garam masala", "Five spice", "Fennel", "Green Cardamom", "Dried ginger", "Dill", "Curry leaf", "Cumin seeds", "Black cumin", "Bay leaf", "Clove", "Cinnamon", "Star anise", "Cayenne", "Caraway seed", "Cajun spice", "Rock salt", "Black pepper", "Black Cardamom", "Asafoetida", "Aniseed", "Raw mango powder", "Carom seed", "Parsley", "Acacia leaf", "Amaranth", "Flour", "Muesli", "Oat", "Jowar", "Brown rice", "Long grain brown rice", "White rice", "Long grain white rice", "Pilau rice", "Basmati rice", "White jasmine rice", "Puffed rice", "Arborio rice", "Tapioca", "Semolina", "Millet", "Wheat", "Buckwheat", "Kidney bean", "Gram", "Gram flour", "Chickpea", "Lentil", "Cous-cous", "Cornmeal", "Bread", "Bread crumb", "Bean", "Barley", "Bean Sprout", "Beef", "Chicken", "Turkey", "Pork", "Bacon", "Lamb", "Partridge", "Quail", "Mutton", "Meat stock", "Keema", "Mincemeat", "Sausages", "Black pudding", "Liver", "Ham", "Breast steak", "Thigh steak", "Rump steak", "Kidney", "Crab", "Chop", "Shrimp", "Fish", "Fish stock", "Tuna", "Pate", "Shellfish", "Shark", "Hilsa", "Sardine", "Salmon", "Prawn", "Pomfret", "Mussel", "Mullet", "Squid", "Haddock", "Flounder", "Caviar", "Cuttlel fish", "Cod", "Clam", "Catfish", "Mackerel", "Anchovie", "Chia seed", "Hazelnut", "Pine nut", "Sunflower seed", "Pistachio", "Mustard seed", "Sesame seed", "Peanut", "Chironji", "Cashew nut", "Almond", "Walnut", "Brown sugar", "White sugar", "Cane sugar", "Castor sugar", "Caramel", "Artificial sweetener", "Icing sugar", "Food dye", "Crystallised sugar lumps", "Honey", "Jaggery", "Golden syrup" });
-            comboBox1.Location = new Point(6, 58);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 3;
-            // 
-            // ingredientQuantityBox
-            // 
-            ingredientQuantityBox.Location = new Point(163, 58);
-            ingredientQuantityBox.Name = "ingredientQuantityBox";
-            ingredientQuantityBox.Size = new Size(208, 27);
-            ingredientQuantityBox.TabIndex = 4;
+            addIngredientButton.Location = new Point(377, 56);
+            addIngredientButton.Name = "addIngredientButton";
+            addIngredientButton.Size = new Size(126, 29);
+            addIngredientButton.TabIndex = 6;
+            addIngredientButton.Text = "Add ingredient";
+            addIngredientButton.UseVisualStyleBackColor = true;
             // 
             // ingredientListDisplay
             // 
@@ -371,14 +339,47 @@
             ingredientListDisplay.Size = new Size(497, 96);
             ingredientListDisplay.TabIndex = 5;
             // 
-            // addIngredientButton
+            // ingredientQuantityBox
             // 
-            addIngredientButton.Location = new Point(377, 56);
-            addIngredientButton.Name = "addIngredientButton";
-            addIngredientButton.Size = new Size(126, 29);
-            addIngredientButton.TabIndex = 6;
-            addIngredientButton.Text = "Add ingredient";
-            addIngredientButton.UseVisualStyleBackColor = true;
+            ingredientQuantityBox.Location = new Point(163, 58);
+            ingredientQuantityBox.Name = "ingredientQuantityBox";
+            ingredientQuantityBox.Size = new Size(208, 27);
+            ingredientQuantityBox.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Cream", "Whipped cream", "Sour cream", "Double cream", "Yoghurt", "Milk", "Condensed milk", "Evapourated milk", "Buttermilk", "Egg", "Cheese", "Butter", "Custard", "Margerine", "Sunflower oil", "Canola oil", "Vegetable oil", "Peanut oil", "Rapeseed oil", "Mustard oil", "Sunflower oil", "Olive oil", "Coconut oil", "Sesame oil", "Orange", "Lemon", "Mango", "Apple", "Blueberry", "Raspberry", "Strawberry", "Cranberry", "Kiwi", "Banana", "Watermelon", "Tomato", "Water Chestnut", "Papaya", "Olive", "Pear", "Sultana", "Mulberry", "Lychee", "Raisins", "Jamun", "Tamarind", "Gooseberry", "Grapefruit", "Dates", "Custard apple", "Black currant", "Red currant", "Coconut", "Cherry", "Apricot", "Figs", "Pomegranate", "Grapes", "Pineapple", "Guava", "Plum", "Bok choy", "Green bean", "Sorrel leaf", "Rocket leaf", "Plantain", "Turnip", "Sweet potatoes", "Round gourd", "Pimento", "Spinach", "Brown onion", "Red onion", "Spring onion", "Shallot", "Mustard leaf", "Mushroom", "Radish", "Lettuce", "Leek", "Pumpkin", "Yam", "Jalapeno", "Jackfruit", "Horseradish", "Peas", "Chilli", "Gherkin", "Garlic", "Fenugreek", "Cucumber", "Courgette", "Aubergine", "Corn cob", "Baby corn", "Mushroom", "Celery", "Cauliflower", "Carrot", "Green bell pepper", "Yellow bell pepper", "Orange bell pepper", "Red bell pepper", "Capers", "Broccoli", "Broad bean", "Bottle gourd", "Bitter gourd", "Lotus stem", "Beetroot", "Pigweed", "Cabbage", "Bamboo shoot", "Avocado", "Asparagus", "Arichoke", "Taro", "Potato", "Ginger", "Coriander ", "Chive", "Galangal", "Tulsi", "Sage", "Rosemary", "Basil", "Mint", "Chives", "Chilli powder", "Oregano", "Nasturtium", "Salt", "Mustard", "Paprika", "Marjoram", "Lemongrass", "Saffron", "Dried fenugreek", "Fenugreek seed", "Kashmiri Mirch", "Onion seed", "Mace", "Nutmeg", "Mixed herbs", "Thyme", "Tumeric", "Garam masala", "Five spice", "Fennel", "Green Cardamom", "Dried ginger", "Dill", "Curry leaf", "Cumin seeds", "Black cumin", "Bay leaf", "Clove", "Cinnamon", "Star anise", "Cayenne", "Caraway seed", "Cajun spice", "Rock salt", "Black pepper", "Black Cardamom", "Asafoetida", "Aniseed", "Raw mango powder", "Carom seed", "Parsley", "Acacia leaf", "Amaranth", "Flour", "Muesli", "Oat", "Jowar", "Brown rice", "Long grain brown rice", "White rice", "Long grain white rice", "Pilau rice", "Basmati rice", "White jasmine rice", "Puffed rice", "Arborio rice", "Tapioca", "Semolina", "Millet", "Wheat", "Buckwheat", "Kidney bean", "Gram", "Gram flour", "Chickpea", "Lentil", "Cous-cous", "Cornmeal", "Bread", "Bread crumb", "Bean", "Barley", "Bean Sprout", "Beef", "Chicken", "Turkey", "Pork", "Bacon", "Lamb", "Partridge", "Quail", "Mutton", "Meat stock", "Keema", "Mincemeat", "Sausages", "Black pudding", "Liver", "Ham", "Breast steak", "Thigh steak", "Rump steak", "Kidney", "Crab", "Chop", "Shrimp", "Fish", "Fish stock", "Tuna", "Pate", "Shellfish", "Shark", "Hilsa", "Sardine", "Salmon", "Prawn", "Pomfret", "Mussel", "Mullet", "Squid", "Haddock", "Flounder", "Caviar", "Cuttlel fish", "Cod", "Clam", "Catfish", "Mackerel", "Anchovie", "Chia seed", "Hazelnut", "Pine nut", "Sunflower seed", "Pistachio", "Mustard seed", "Sesame seed", "Peanut", "Chironji", "Cashew nut", "Almond", "Walnut", "Brown sugar", "White sugar", "Cane sugar", "Castor sugar", "Caramel", "Artificial sweetener", "Icing sugar", "Food dye", "Crystallised sugar lumps", "Honey", "Jaggery", "Golden syrup" });
+            comboBox1.Location = new Point(6, 58);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 3;
+            // 
+            // ingredientQuantityLbl
+            // 
+            ingredientQuantityLbl.AutoSize = true;
+            ingredientQuantityLbl.Location = new Point(162, 35);
+            ingredientQuantityLbl.Name = "ingredientQuantityLbl";
+            ingredientQuantityLbl.Size = new Size(209, 20);
+            ingredientQuantityLbl.TabIndex = 2;
+            ingredientQuantityLbl.Text = "Ingredient quantity (in grams):";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(156, 35);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 20);
+            label2.TabIndex = 1;
+            // 
+            // ingredientNameLbl
+            // 
+            ingredientNameLbl.AutoSize = true;
+            ingredientNameLbl.Location = new Point(6, 35);
+            ingredientNameLbl.Name = "ingredientNameLbl";
+            ingredientNameLbl.Size = new Size(121, 20);
+            ingredientNameLbl.TabIndex = 0;
+            ingredientNameLbl.Text = "Ingredient name:";
             // 
             // RecipePathway
             // 

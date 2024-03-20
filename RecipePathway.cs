@@ -17,6 +17,9 @@ namespace RecipeFinderPrototype
             InitializeComponent();
         }
 
-        
+        private void returnHomeButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
