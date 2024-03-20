@@ -7,13 +7,13 @@
 * Recipe removal method
 * Designed custom recipe display Control
 * Created data class - Private central link list holding, accessible to all classes in app
-
+* Designed recipe pathway form
 
 ## In progress tasks
 
 
 ## Incomplete MVP tasks
-* Allergen screening & user fridge input window
+* Make recipe pathway 
 * Recipe sort method
 * Recipe sheet form
 

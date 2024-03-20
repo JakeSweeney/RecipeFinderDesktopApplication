@@ -27,10 +27,22 @@ namespace RecipeFinderPrototype
             fileopener.Start();
         }
 
-        private void customRecipeToolsButton_(object sender, EventArgs e)
-        {
 
+        private void customRecipeToolsButton_Click(object sender, EventArgs e)
+        {
+            CustomRecipeTools customRecipeTools = new CustomRecipeTools();
+            customRecipeTools.Show();
+            WindowState = FormWindowState.Minimized;
         }
+
+        private void recipeFindingFormButton_Click(object sender, EventArgs e)
+        {
+            RecipePathway recipePathway = new RecipePathway();
+            recipePathway.Show();
+            WindowState = FormWindowState.Minimized;
+        }
+
+
 
         /*private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

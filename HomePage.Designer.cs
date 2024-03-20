@@ -33,7 +33,7 @@
             dialogueLbl2 = new Label();
             dialogueLbl3 = new Label();
             dialogueLbl4 = new Label();
-            button1 = new Button();
+            recipeFindingFormButton = new Button();
             customRecipeToolsButton = new Button();
             SuspendLayout();
             // 
@@ -84,23 +84,25 @@
             dialogueLbl4.TabIndex = 4;
             dialogueLbl4.Text = "Where do you want to go?";
             // 
-            // button1
+            // recipeFindingFormButton
             // 
-            button1.Location = new Point(77, 228);
-            button1.Name = "button1";
-            button1.Size = new Size(161, 29);
-            button1.TabIndex = 5;
-            button1.Text = "Find me a recipe";
-            button1.UseVisualStyleBackColor = true;
+            recipeFindingFormButton.Location = new Point(69, 207);
+            recipeFindingFormButton.Name = "recipeFindingFormButton";
+            recipeFindingFormButton.Size = new Size(161, 29);
+            recipeFindingFormButton.TabIndex = 5;
+            recipeFindingFormButton.Text = "Find me a recipe";
+            recipeFindingFormButton.UseVisualStyleBackColor = true;
+            recipeFindingFormButton.Click += recipeFindingFormButton_Click;
             // 
             // customRecipeToolsButton
             // 
-            customRecipeToolsButton.Location = new Point(310, 228);
+            customRecipeToolsButton.Location = new Point(312, 207);
             customRecipeToolsButton.Name = "customRecipeToolsButton";
             customRecipeToolsButton.Size = new Size(174, 29);
             customRecipeToolsButton.TabIndex = 6;
             customRecipeToolsButton.Text = "Custom recipe tools";
             customRecipeToolsButton.UseVisualStyleBackColor = true;
+            customRecipeToolsButton.Click += customRecipeToolsButton_Click;
             // 
             // HomePage
             // 
@@ -108,7 +110,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(532, 303);
             Controls.Add(customRecipeToolsButton);
-            Controls.Add(button1);
+            Controls.Add(recipeFindingFormButton);
             Controls.Add(dialogueLbl4);
             Controls.Add(dialogueLbl3);
             Controls.Add(dialogueLbl2);
@@ -127,7 +129,7 @@
         private Label dialogueLbl2;
         private Label dialogueLbl3;
         private Label dialogueLbl4;
-        private Button button1;
+        private Button recipeFindingFormButton;
         private Button customRecipeToolsButton;
     }
 }
