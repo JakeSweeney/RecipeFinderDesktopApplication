@@ -8,15 +8,17 @@ namespace RecipeFinderPrototype
 {
     internal class Recipe : IComparable<Recipe>
     {
-        public Recipe(string Name,string WebLink) 
+        public Recipe(string Name,string Region,string WebLink) 
         { 
             this.Name = Name;
+            this.Region = Region;
             ingredientList = new LinkedList<string>();
             ingredientQuantityList = new LinkedList<float>();
             allergenList = new LinkedList<string>();
             this.WebLink = WebLink;
         }
         private string name = string.Empty;
+        private string region = string.Empty;
         private LinkedList<string> ingredientList;
         private LinkedList<float> ingredientQuantityList;
         private LinkedList<string> allergenList;
@@ -27,7 +29,11 @@ namespace RecipeFinderPrototype
             get { return name; }
             set { name = value; }
         }
-
+        public string Region
+        {
+            get { return region; }
+            set { region = value; }
+        }
         public LinkedList<string> IngredientList
         {
             get { return ingredientList; }
@@ -123,6 +129,30 @@ namespace RecipeFinderPrototype
                     if (recipeAllergen.Equals(userAllergen)) return true;
                 }
                 return false;
+            }
+        }
+
+        public void AddIngredient(string ingredient)
+        {
+            if (ingredient != null)
+            {
+                ingredientList.AddLast(ingredient);
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        public void AddAllergen(string allergen)
+        {
+            if (allergen != null)
+            {
+                allergenList.AddLast(allergen);
+            }
+            else
+            {
+                return;
             }
         }
 

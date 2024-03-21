@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -48,7 +49,28 @@ namespace RecipeFinderPrototype
             }
             
         }*/
-
+        public static void PresetListAddAll()
+        {
+            string allPresetRecipes = File.ReadAllText(@"C: \Users\jakes\source\repos\Personal Projects\RecipeFinderPrototype\Source\Recipes.txt");
+            string[] allRecipesSplitter = allPresetRecipes.Split("\n");
+            foreach(string fullRecipe in allRecipesSplitter)
+            {
+                string[] recipeComponents = fullRecipe.Split(",");
+                string[] recipeIngredientsArray = recipeComponents[2].Split("/");
+                string[] allergenArray = recipeComponents[3].Split("/");
+                Recipe currentRecipe = new Recipe(recipeComponents[0], recipeComponents[1], recipeComponents[4]);
+                foreach (string ingredient in recipeIngredientsArray)
+                {
+                    currentRecipe.AddIngredient(ingredient);
+                }
+                foreach (string allergen in allergenArray)
+                {
+                   currentRecipe.AddAllergen(allergen);
+                }
+                presetRecipes.AddLast(currentRecipe);
+            }
+            
+        }
         public static void ListSort(LinkedList<Recipe> recipeList, LinkedList<string> userFridge)
         {
             if(recipeList.Count > 0)
