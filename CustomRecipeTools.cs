@@ -21,12 +21,15 @@ namespace RecipeFinderPrototype
         private void noWebLinkBox_CheckedChanged(object sender, EventArgs e)
         {
             if(noWeblinkBox.Checked) 
-            { 
-
+            {
+                weblinkBox.Visible = false;
+                weblinkPromptLbl.Visible = false;
             }
             else
             {
-
+                weblinkBox.Visible = true;
+                weblinkPromptLbl.Visible = true;
+                //test
             }
         }
 
