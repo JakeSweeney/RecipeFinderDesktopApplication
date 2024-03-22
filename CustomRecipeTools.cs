@@ -29,7 +29,6 @@ namespace RecipeFinderPrototype
             {
                 weblinkBox.Visible = true;
                 weblinkPromptLbl.Visible = true;
-                //test
             }
         }
 
