@@ -10,11 +10,11 @@
 * Designed recipe pathway form
 
 ## In progress tasks
-
+* Recipe sort 
+* 
 
 ## Incomplete MVP tasks
 * Make recipe pathway 
-* Recipe sort method
 * Recipe sheet form
 * 
 
