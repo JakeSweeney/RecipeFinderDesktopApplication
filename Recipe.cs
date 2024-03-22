@@ -144,6 +144,18 @@ namespace RecipeFinderPrototype
             }
         }
 
+        public void AddQuantity(float quantity)
+        {
+            if (quantity > 0)
+            {
+                ingredientQuantityList.AddLast(quantity);
+            }
+            else
+            {
+                return;
+            }
+        }
+
         public void AddAllergen(string allergen)
         {
             if (allergen != null)

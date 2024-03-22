@@ -20,7 +20,14 @@ namespace RecipeFinderPrototype
 
         private void noWebLinkBox_CheckedChanged(object sender, EventArgs e)
         {
+            if(noWeblinkBox.Checked) 
+            { 
 
+            }
+            else
+            {
+
+            }
         }
 
         private void returnHomeButton_Click(object sender, EventArgs e)
