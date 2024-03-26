@@ -29,26 +29,7 @@ namespace RecipeFinderPrototype
             }
             
         }
-        //Example of deciding list type for a method to function
-        /*public static void RecipeAdd(Recipe addingRecipe, bool customList = false)
-        {
-            if(!customList)
-            {
-                return;
-            }
-            else
-            {
-                if (CustomRecipes.Contains(addingRecipe))
-                {
-                    throw new ArgumentException("Recipe name already entered, please enter a unique name.");
-                }
-                else
-                {
-                    CustomRecipes.AddLast(addingRecipe);
-                }
-            }
-            
-        }*/
+        
         public static void PresetListAddAll()
         {
             string allPresetRecipes = File.ReadAllText(@"C: \Users\jakes\source\repos\Personal Projects\RecipeFinderPrototype\Source\Recipes.txt");

@@ -35,6 +35,8 @@
             allergenBox = new TextBox();
             webLinkLabel = new LinkLabel();
             label3 = new Label();
+            regionLbl = new Label();
+            regionTextBox = new TextBox();
             SuspendLayout();
             // 
             // recipeNameBox
@@ -70,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(5, 166);
+            label2.Location = new Point(5, 249);
             label2.Name = "label2";
             label2.Size = new Size(74, 20);
             label2.TabIndex = 3;
@@ -82,7 +84,7 @@
             allergenBox.BackColor = SystemColors.ControlLight;
             allergenBox.BorderStyle = BorderStyle.None;
             allergenBox.ForeColor = Color.Red;
-            allergenBox.Location = new Point(85, 166);
+            allergenBox.Location = new Point(5, 272);
             allergenBox.Multiline = true;
             allergenBox.Name = "allergenBox";
             allergenBox.ReadOnly = true;
@@ -94,7 +96,7 @@
             // 
             webLinkLabel.AutoSize = true;
             webLinkLabel.BackColor = SystemColors.ControlLight;
-            webLinkLabel.Location = new Point(85, 136);
+            webLinkLabel.Location = new Point(5, 218);
             webLinkLabel.Name = "webLinkLabel";
             webLinkLabel.Size = new Size(151, 20);
             webLinkLabel.TabIndex = 5;
@@ -104,16 +106,36 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 136);
+            label3.Location = new Point(5, 189);
             label3.Name = "label3";
             label3.Size = new Size(65, 20);
             label3.TabIndex = 6;
             label3.Text = "Weblink:";
             // 
+            // regionLbl
+            // 
+            regionLbl.AutoSize = true;
+            regionLbl.Location = new Point(0, 136);
+            regionLbl.Name = "regionLbl";
+            regionLbl.Size = new Size(56, 20);
+            regionLbl.TabIndex = 7;
+            regionLbl.Text = "Region";
+            // 
+            // regionTextBox
+            // 
+            regionTextBox.BackColor = SystemColors.ControlLight;
+            regionTextBox.Location = new Point(5, 159);
+            regionTextBox.Name = "regionTextBox";
+            regionTextBox.ReadOnly = true;
+            regionTextBox.Size = new Size(125, 27);
+            regionTextBox.TabIndex = 8;
+            // 
             // recipeDisplay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(regionTextBox);
+            Controls.Add(regionLbl);
             Controls.Add(label3);
             Controls.Add(webLinkLabel);
             Controls.Add(allergenBox);
@@ -122,7 +144,7 @@
             Controls.Add(label1);
             Controls.Add(recipeNameBox);
             Name = "recipeDisplay";
-            Size = new Size(512, 252);
+            Size = new Size(512, 372);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -136,5 +158,7 @@
         private TextBox allergenBox;
         private LinkLabel webLinkLabel;
         private Label label3;
+        private Label regionLbl;
+        private TextBox regionTextBox;
     }
 }
