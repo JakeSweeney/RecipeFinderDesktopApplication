@@ -19,7 +19,8 @@ namespace RecipeFinderPrototype
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Application.OpenForms[0].WindowState = FormWindowState.Normal;
+            Close();
         }
     }
 }
