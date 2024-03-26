@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             logoLbl = new Label();
+            returnHomeButton = new Button();
             SuspendLayout();
             // 
             // logoLbl
@@ -42,11 +43,22 @@
             logoLbl.TabIndex = 0;
             logoLbl.Text = "Choose My Food!";
             // 
+            // returnHomeButton
+            // 
+            returnHomeButton.Location = new Point(506, 12);
+            returnHomeButton.Name = "returnHomeButton";
+            returnHomeButton.Size = new Size(114, 29);
+            returnHomeButton.TabIndex = 1;
+            returnHomeButton.Text = "Return Home";
+            returnHomeButton.UseVisualStyleBackColor = true;
+            returnHomeButton.Click += button1_Click;
+            // 
             // RecipeSheet
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(632, 450);
+            Controls.Add(returnHomeButton);
             Controls.Add(logoLbl);
             Name = "RecipeSheet";
             Text = "Recipe Sheet";
@@ -57,5 +69,6 @@
         #endregion
 
         private Label logoLbl;
+        private Button returnHomeButton;
     }
 }
