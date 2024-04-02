@@ -67,19 +67,30 @@ namespace RecipeFinderPrototype
                 return;
             }
         }
-
+        
         public static void RecipeRemove(string nameOfDeletion)
         {
             if (customRecipes.Count == 0 || nameOfDeletion == string.Empty)
             {
                 return;
             }
-            foreach (Recipe recipeIterator in CustomRecipes)
+            LinkedList<Recipe> newCustomRecipes = new LinkedList<Recipe> ();
+            foreach (Recipe transferingRecipe in customRecipes)
             {
-                if(recipeIterator.Name == nameOfDeletion)
+                if(transferingRecipe.Name != nameOfDeletion)
                 {
-                    CustomRecipes.Remove(recipeIterator);
+                    newCustomRecipes.AddLast(transferingRecipe);
                 }
+            }
+            /*foreach(Recipe removingRecipe in customRecipes)
+            {
+                customRecipes.Remove(removingRecipe);
+            }
+            */
+            customRecipes.Clear();
+            foreach (Recipe addingRecipe in newCustomRecipes)
+            {
+                customRecipes.AddLast(addingRecipe);
             }
         }
 
