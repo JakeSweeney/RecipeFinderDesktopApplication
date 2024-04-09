@@ -94,6 +94,9 @@ namespace RecipeFinderPrototype
             if (ingredientSelectComboBox.Text == string.Empty)
             {
                 taskStatusLbl.Text = "Please add a valid ingredient.";
+            } else if (ingredientPresent(ingredientSelectComboBox.Text))
+            {
+                taskStatusLbl.Text = $"The ingredient '{ingredientSelectComboBox.Text}' has already been added.";
             }
             else
             {

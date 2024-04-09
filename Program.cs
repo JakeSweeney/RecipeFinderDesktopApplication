@@ -14,6 +14,7 @@ namespace RecipeFinderPrototype
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new HomePage());
+            Data.PresetListAddAll();
         }
         
     }

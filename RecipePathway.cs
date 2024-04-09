@@ -22,5 +22,35 @@ namespace RecipeFinderPrototype
             Application.OpenForms[0].WindowState = FormWindowState.Normal;
             Close();
         }
+
+        private void displayAllButton_Click(object sender, EventArgs e)
+        {
+            if(!customRadioButton.Checked && !presetRadioButton.Checked)
+            {
+                taskStatusLbl.Text = "Please select whether you would like custom or preset recipes.";
+            }
+            else if(customRadioButton.Checked)
+            {
+                Data.displayRecipes.Clear();
+                foreach(Recipe currentRecipe in Data.CustomRecipes)
+                {
+                    Data.displayRecipes.AddLast(currentRecipe);
+                }
+                RecipeSheet recipeSheet = new RecipeSheet();
+                recipeSheet.Show();
+                Close();
+            }
+            else
+            {
+                Data.displayRecipes.Clear();
+                foreach(Recipe currentRecipe in Data.PresetRecipes)
+                {
+                    Data.displayRecipes.AddLast(currentRecipe);
+                }
+                RecipeSheet recipeSheet = new RecipeSheet();
+                recipeSheet.Show();
+                Close();
+            }
+        }
     }
 }

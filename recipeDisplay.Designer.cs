@@ -43,16 +43,18 @@
             // 
             recipeNameBox.BackColor = SystemColors.ControlLight;
             recipeNameBox.BorderStyle = BorderStyle.None;
+            recipeNameBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             recipeNameBox.Location = new Point(3, 3);
+            recipeNameBox.Multiline = true;
             recipeNameBox.Name = "recipeNameBox";
             recipeNameBox.ReadOnly = true;
-            recipeNameBox.Size = new Size(506, 20);
+            recipeNameBox.Size = new Size(501, 43);
             recipeNameBox.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(3, 26);
+            label1.Location = new Point(3, 81);
             label1.Name = "label1";
             label1.Size = new Size(86, 20);
             label1.TabIndex = 1;
@@ -62,7 +64,7 @@
             // 
             ingredientBox.BackColor = SystemColors.ControlLight;
             ingredientBox.BorderStyle = BorderStyle.None;
-            ingredientBox.Location = new Point(5, 49);
+            ingredientBox.Location = new Point(0, 104);
             ingredientBox.Multiline = true;
             ingredientBox.Name = "ingredientBox";
             ingredientBox.ReadOnly = true;
@@ -72,31 +74,29 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(5, 249);
+            label2.Location = new Point(3, 191);
             label2.Name = "label2";
             label2.Size = new Size(74, 20);
             label2.TabIndex = 3;
             label2.Text = "Allergens:";
-            label2.Visible = false;
             // 
             // allergenBox
             // 
             allergenBox.BackColor = SystemColors.ControlLight;
             allergenBox.BorderStyle = BorderStyle.None;
             allergenBox.ForeColor = Color.Red;
-            allergenBox.Location = new Point(5, 272);
+            allergenBox.Location = new Point(5, 214);
             allergenBox.Multiline = true;
             allergenBox.Name = "allergenBox";
             allergenBox.ReadOnly = true;
-            allergenBox.Size = new Size(424, 76);
+            allergenBox.Size = new Size(499, 76);
             allergenBox.TabIndex = 4;
-            allergenBox.Visible = false;
             // 
             // webLinkLabel
             // 
             webLinkLabel.AutoSize = true;
             webLinkLabel.BackColor = SystemColors.ControlLight;
-            webLinkLabel.Location = new Point(5, 218);
+            webLinkLabel.Location = new Point(5, 323);
             webLinkLabel.Name = "webLinkLabel";
             webLinkLabel.Size = new Size(151, 20);
             webLinkLabel.TabIndex = 5;
@@ -106,7 +106,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(5, 189);
+            label3.Location = new Point(5, 303);
             label3.Name = "label3";
             label3.Size = new Size(65, 20);
             label3.TabIndex = 6;
@@ -115,25 +115,27 @@
             // regionLbl
             // 
             regionLbl.AutoSize = true;
-            regionLbl.Location = new Point(0, 136);
+            regionLbl.Location = new Point(3, 52);
             regionLbl.Name = "regionLbl";
-            regionLbl.Size = new Size(56, 20);
+            regionLbl.Size = new Size(120, 20);
             regionLbl.TabIndex = 7;
-            regionLbl.Text = "Region";
+            regionLbl.Text = "Region of origin:";
             // 
             // regionTextBox
             // 
             regionTextBox.BackColor = SystemColors.ControlLight;
-            regionTextBox.Location = new Point(5, 159);
+            regionTextBox.BorderStyle = BorderStyle.None;
+            regionTextBox.Location = new Point(129, 52);
             regionTextBox.Name = "regionTextBox";
             regionTextBox.ReadOnly = true;
-            regionTextBox.Size = new Size(125, 27);
+            regionTextBox.Size = new Size(373, 20);
             regionTextBox.TabIndex = 8;
             // 
             // recipeDisplay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(regionTextBox);
             Controls.Add(regionLbl);
             Controls.Add(label3);
@@ -144,7 +146,7 @@
             Controls.Add(label1);
             Controls.Add(recipeNameBox);
             Name = "recipeDisplay";
-            Size = new Size(512, 372);
+            Size = new Size(510, 350);
             ResumeLayout(false);
             PerformLayout();
         }

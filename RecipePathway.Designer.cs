@@ -31,23 +31,9 @@
             returnHomeButton = new Button();
             logoLbl = new Label();
             recipeListTypePromptLbl = new Label();
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            allergySelectionGroupBox = new GroupBox();
-            sulphurDioxideCheckBox = new CheckBox();
-            soyaCheckBox = new CheckBox();
-            sesameSeedsCheckBox = new CheckBox();
-            peanutsCheckBox = new CheckBox();
-            nutsCheckBox = new CheckBox();
-            mustardCheckBox = new CheckBox();
-            Molluscs = new CheckBox();
-            milkCheckBox = new CheckBox();
-            fishCheckBox = new CheckBox();
-            eggsCheckBox = new CheckBox();
-            crustaceansCheckBox = new CheckBox();
-            glutenCheckBox = new CheckBox();
-            celeryCheckBox = new CheckBox();
-            button1 = new Button();
+            customRadioButton = new RadioButton();
+            presetRadioButton = new RadioButton();
+            displayAllButton = new Button();
             button3 = new Button();
             taskStatusGroupBox = new GroupBox();
             taskStatusLbl = new Label();
@@ -59,7 +45,8 @@
             ingredientQuantityLbl = new Label();
             label2 = new Label();
             ingredientNameLbl = new Label();
-            allergySelectionGroupBox.SuspendLayout();
+            allergenCheckedListBox = new CheckedListBox();
+            label1 = new Label();
             taskStatusGroupBox.SuspendLayout();
             userFridgeGroupBox.SuspendLayout();
             SuspendLayout();
@@ -94,188 +81,37 @@
             recipeListTypePromptLbl.TabIndex = 2;
             recipeListTypePromptLbl.Text = "Which type of recipe are you finding?";
             // 
-            // radioButton1
+            // customRadioButton
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Location = new Point(282, 66);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(125, 24);
-            radioButton1.TabIndex = 3;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Custom recipe";
-            radioButton1.UseVisualStyleBackColor = true;
+            customRadioButton.AutoSize = true;
+            customRadioButton.Location = new Point(282, 66);
+            customRadioButton.Name = "customRadioButton";
+            customRadioButton.Size = new Size(125, 24);
+            customRadioButton.TabIndex = 3;
+            customRadioButton.TabStop = true;
+            customRadioButton.Text = "Custom recipe";
+            customRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // presetRadioButton
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(413, 66);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(115, 24);
-            radioButton2.TabIndex = 4;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Preset recipe";
-            radioButton2.UseVisualStyleBackColor = true;
+            presetRadioButton.AutoSize = true;
+            presetRadioButton.Location = new Point(413, 66);
+            presetRadioButton.Name = "presetRadioButton";
+            presetRadioButton.Size = new Size(115, 24);
+            presetRadioButton.TabIndex = 4;
+            presetRadioButton.TabStop = true;
+            presetRadioButton.Text = "Preset recipe";
+            presetRadioButton.UseVisualStyleBackColor = true;
             // 
-            // allergySelectionGroupBox
+            // displayAllButton
             // 
-            allergySelectionGroupBox.Controls.Add(sulphurDioxideCheckBox);
-            allergySelectionGroupBox.Controls.Add(soyaCheckBox);
-            allergySelectionGroupBox.Controls.Add(sesameSeedsCheckBox);
-            allergySelectionGroupBox.Controls.Add(peanutsCheckBox);
-            allergySelectionGroupBox.Controls.Add(nutsCheckBox);
-            allergySelectionGroupBox.Controls.Add(mustardCheckBox);
-            allergySelectionGroupBox.Controls.Add(Molluscs);
-            allergySelectionGroupBox.Controls.Add(milkCheckBox);
-            allergySelectionGroupBox.Controls.Add(fishCheckBox);
-            allergySelectionGroupBox.Controls.Add(eggsCheckBox);
-            allergySelectionGroupBox.Controls.Add(crustaceansCheckBox);
-            allergySelectionGroupBox.Controls.Add(glutenCheckBox);
-            allergySelectionGroupBox.Controls.Add(celeryCheckBox);
-            allergySelectionGroupBox.Location = new Point(19, 100);
-            allergySelectionGroupBox.Name = "allergySelectionGroupBox";
-            allergySelectionGroupBox.Size = new Size(509, 121);
-            allergySelectionGroupBox.TabIndex = 5;
-            allergySelectionGroupBox.TabStop = false;
-            allergySelectionGroupBox.Text = "Tick a box if you are allergic to that ingredient category:";
-            // 
-            // sulphurDioxideCheckBox
-            // 
-            sulphurDioxideCheckBox.AutoSize = true;
-            sulphurDioxideCheckBox.Location = new Point(209, 87);
-            sulphurDioxideCheckBox.Name = "sulphurDioxideCheckBox";
-            sulphurDioxideCheckBox.Size = new Size(135, 24);
-            sulphurDioxideCheckBox.TabIndex = 12;
-            sulphurDioxideCheckBox.Text = "Sulphur dioxide";
-            sulphurDioxideCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // soyaCheckBox
-            // 
-            soyaCheckBox.AutoSize = true;
-            soyaCheckBox.Location = new Point(140, 87);
-            soyaCheckBox.Name = "soyaCheckBox";
-            soyaCheckBox.Size = new Size(63, 24);
-            soyaCheckBox.TabIndex = 11;
-            soyaCheckBox.Text = "Soya";
-            soyaCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // sesameSeedsCheckBox
-            // 
-            sesameSeedsCheckBox.AutoSize = true;
-            sesameSeedsCheckBox.Location = new Point(11, 87);
-            sesameSeedsCheckBox.Name = "sesameSeedsCheckBox";
-            sesameSeedsCheckBox.Size = new Size(123, 24);
-            sesameSeedsCheckBox.TabIndex = 10;
-            sesameSeedsCheckBox.Text = "Sesame seeds";
-            sesameSeedsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // peanutsCheckBox
-            // 
-            peanutsCheckBox.AutoSize = true;
-            peanutsCheckBox.Location = new Point(390, 57);
-            peanutsCheckBox.Name = "peanutsCheckBox";
-            peanutsCheckBox.Size = new Size(81, 24);
-            peanutsCheckBox.TabIndex = 9;
-            peanutsCheckBox.Text = "Peanuts";
-            peanutsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // nutsCheckBox
-            // 
-            nutsCheckBox.AutoSize = true;
-            nutsCheckBox.Location = new Point(323, 57);
-            nutsCheckBox.Name = "nutsCheckBox";
-            nutsCheckBox.Size = new Size(61, 24);
-            nutsCheckBox.TabIndex = 8;
-            nutsCheckBox.Text = "Nuts";
-            nutsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // mustardCheckBox
-            // 
-            mustardCheckBox.AutoSize = true;
-            mustardCheckBox.Location = new Point(232, 57);
-            mustardCheckBox.Name = "mustardCheckBox";
-            mustardCheckBox.Size = new Size(85, 24);
-            mustardCheckBox.TabIndex = 7;
-            mustardCheckBox.Text = "Mustard";
-            mustardCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // Molluscs
-            // 
-            Molluscs.AutoSize = true;
-            Molluscs.Location = new Point(138, 57);
-            Molluscs.Name = "Molluscs";
-            Molluscs.Size = new Size(88, 24);
-            Molluscs.TabIndex = 6;
-            Molluscs.Text = "Molluscs";
-            Molluscs.UseVisualStyleBackColor = true;
-            // 
-            // milkCheckBox
-            // 
-            milkCheckBox.AutoSize = true;
-            milkCheckBox.Location = new Point(73, 57);
-            milkCheckBox.Name = "milkCheckBox";
-            milkCheckBox.Size = new Size(59, 24);
-            milkCheckBox.TabIndex = 5;
-            milkCheckBox.Text = "Milk";
-            milkCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // fishCheckBox
-            // 
-            fishCheckBox.AutoSize = true;
-            fishCheckBox.Location = new Point(11, 57);
-            fishCheckBox.Name = "fishCheckBox";
-            fishCheckBox.Size = new Size(56, 24);
-            fishCheckBox.TabIndex = 4;
-            fishCheckBox.Text = "Fish";
-            fishCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // eggsCheckBox
-            // 
-            eggsCheckBox.AutoSize = true;
-            eggsCheckBox.Location = new Point(409, 27);
-            eggsCheckBox.Name = "eggsCheckBox";
-            eggsCheckBox.Size = new Size(63, 24);
-            eggsCheckBox.TabIndex = 3;
-            eggsCheckBox.Text = "Eggs";
-            eggsCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // crustaceansCheckBox
-            // 
-            crustaceansCheckBox.AutoSize = true;
-            crustaceansCheckBox.Location = new Point(294, 27);
-            crustaceansCheckBox.Name = "crustaceansCheckBox";
-            crustaceansCheckBox.Size = new Size(109, 24);
-            crustaceansCheckBox.TabIndex = 2;
-            crustaceansCheckBox.Text = "Crustaceans";
-            crustaceansCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // glutenCheckBox
-            // 
-            glutenCheckBox.AutoSize = true;
-            glutenCheckBox.Location = new Point(89, 27);
-            glutenCheckBox.Name = "glutenCheckBox";
-            glutenCheckBox.Size = new Size(199, 24);
-            glutenCheckBox.TabIndex = 1;
-            glutenCheckBox.Text = "Cereals containing gluten";
-            glutenCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // celeryCheckBox
-            // 
-            celeryCheckBox.AutoSize = true;
-            celeryCheckBox.Location = new Point(11, 27);
-            celeryCheckBox.Name = "celeryCheckBox";
-            celeryCheckBox.Size = new Size(72, 24);
-            celeryCheckBox.TabIndex = 0;
-            celeryCheckBox.Text = "Celery";
-            celeryCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(19, 501);
-            button1.Name = "button1";
-            button1.Size = new Size(206, 29);
-            button1.TabIndex = 6;
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
+            displayAllButton.Location = new Point(19, 501);
+            displayAllButton.Name = "displayAllButton";
+            displayAllButton.Size = new Size(154, 29);
+            displayAllButton.TabIndex = 6;
+            displayAllButton.Text = "Display all recipes";
+            displayAllButton.UseVisualStyleBackColor = true;
+            displayAllButton.Click += displayAllButton_Click;
             // 
             // button3
             // 
@@ -381,25 +217,45 @@
             ingredientNameLbl.TabIndex = 0;
             ingredientNameLbl.Text = "Ingredient name:";
             // 
+            // allergenCheckedListBox
+            // 
+            allergenCheckedListBox.BorderStyle = BorderStyle.FixedSingle;
+            allergenCheckedListBox.FormattingEnabled = true;
+            allergenCheckedListBox.HorizontalScrollbar = true;
+            allergenCheckedListBox.Items.AddRange(new object[] { "Celery", "Gluten", "Crustaceans", "Egg", "Fish", "Milk", "Molluscs", "Mustard", "Nuts", "Peanuts", "Sesame seeds", "Soya", "Sulphur dioxide" });
+            allergenCheckedListBox.Location = new Point(19, 120);
+            allergenCheckedListBox.MultiColumn = true;
+            allergenCheckedListBox.Name = "allergenCheckedListBox";
+            allergenCheckedListBox.Size = new Size(503, 90);
+            allergenCheckedListBox.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(19, 97);
+            label1.Name = "label1";
+            label1.Size = new Size(305, 20);
+            label1.TabIndex = 12;
+            label1.Text = "Tick a box if you have one of these allergens:";
+            // 
             // RecipePathway
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 540);
+            Controls.Add(label1);
+            Controls.Add(allergenCheckedListBox);
             Controls.Add(userFridgeGroupBox);
             Controls.Add(taskStatusGroupBox);
             Controls.Add(button3);
-            Controls.Add(button1);
-            Controls.Add(allergySelectionGroupBox);
-            Controls.Add(radioButton2);
-            Controls.Add(radioButton1);
+            Controls.Add(displayAllButton);
+            Controls.Add(presetRadioButton);
+            Controls.Add(customRadioButton);
             Controls.Add(recipeListTypePromptLbl);
             Controls.Add(logoLbl);
             Controls.Add(returnHomeButton);
             Name = "RecipePathway";
             Text = "Recipe Pathway";
-            allergySelectionGroupBox.ResumeLayout(false);
-            allergySelectionGroupBox.PerformLayout();
             taskStatusGroupBox.ResumeLayout(false);
             taskStatusGroupBox.PerformLayout();
             userFridgeGroupBox.ResumeLayout(false);
@@ -413,23 +269,9 @@
         private Button returnHomeButton;
         private Label logoLbl;
         private Label recipeListTypePromptLbl;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private GroupBox allergySelectionGroupBox;
-        private CheckBox celeryCheckBox;
-        private CheckBox glutenCheckBox;
-        private CheckBox crustaceansCheckBox;
-        private CheckBox eggsCheckBox;
-        private CheckBox sulphurDioxideCheckBox;
-        private CheckBox soyaCheckBox;
-        private CheckBox sesameSeedsCheckBox;
-        private CheckBox peanutsCheckBox;
-        private CheckBox nutsCheckBox;
-        private CheckBox mustardCheckBox;
-        private CheckBox Molluscs;
-        private CheckBox milkCheckBox;
-        private CheckBox fishCheckBox;
-        private Button button1;
+        private RadioButton customRadioButton;
+        private RadioButton presetRadioButton;
+        private Button displayAllButton;
         private Button button3;
         private GroupBox taskStatusGroupBox;
         private Label taskStatusLbl;
@@ -441,5 +283,7 @@
         private TextBox ingredientQuantityBox;
         private TextBox ingredientListDisplay;
         private Button addIngredientButton;
+        private CheckedListBox allergenCheckedListBox;
+        private Label label1;
     }
 }

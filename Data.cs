@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,10 @@ namespace RecipeFinderPrototype
     {
         public static LinkedList<Recipe> presetRecipes = new LinkedList<Recipe>();
         public static LinkedList<Recipe> customRecipes = new LinkedList<Recipe>();
+        public static LinkedList<Recipe> displayRecipes = new LinkedList<Recipe>();
         public static LinkedList<Recipe> PresetRecipes { get { return presetRecipes; } }
         public static LinkedList<Recipe> CustomRecipes { get { return customRecipes; } }
-
+        public static LinkedList<Recipe> DisplayRecipes { get { return displayRecipes; } } 
 
         public static void RecipeAdd(Recipe addingRecipe)
         {
@@ -32,7 +34,8 @@ namespace RecipeFinderPrototype
         
         public static void PresetListAddAll()
         {
-            string allPresetRecipes = File.ReadAllText(@"C: \Users\jakes\source\repos\Personal Projects\RecipeFinderPrototype\Source\Recipes.txt");
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Recipes.txt");
+            string allPresetRecipes = File.ReadAllText(path);
             string[] allRecipesSplitter = allPresetRecipes.Split("\n");
             foreach(string fullRecipe in allRecipesSplitter)
             {
@@ -52,7 +55,29 @@ namespace RecipeFinderPrototype
             }
             
         }
-        //Olive
+        
+        public static void DisplayListAllergenFilter(LinkedList<string> userAllergens, LinkedList<Recipe> recipeList)
+        {
+            LinkedList<Recipe> allergenFreeRecipes = new LinkedList<Recipe>();
+            if(recipeList.Count > 0 && userAllergens.Count > 0)
+            {
+                foreach(Recipe currentRecipe in recipeList)
+                {
+                    foreach (string allergen in userAllergens)
+                    {
+                        if (!currentRecipe.ContainsAllergen(allergen))
+                        {
+                            allergenFreeRecipes.AddLast(currentRecipe);
+                        }
+                    }
+                }
+                displayRecipes.Clear();
+                foreach (Recipe currentRecipe in allergenFreeRecipes)
+                {
+                    displayRecipes.AddLast(currentRecipe);
+                }
+            }
+        }
         public static void ListSort(LinkedList<Recipe> recipeList, LinkedList<string> userFridge)
         {
             if(recipeList.Count > 0)
@@ -82,11 +107,6 @@ namespace RecipeFinderPrototype
                     newCustomRecipes.AddLast(transferingRecipe);
                 }
             }
-            /*foreach(Recipe removingRecipe in customRecipes)
-            {
-                customRecipes.Remove(removingRecipe);
-            }
-            */
             customRecipes.Clear();
             foreach (Recipe addingRecipe in newCustomRecipes)
             {

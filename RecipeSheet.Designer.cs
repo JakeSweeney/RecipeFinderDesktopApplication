@@ -30,6 +30,7 @@
         {
             logoLbl = new Label();
             returnHomeButton = new Button();
+            fLPRecipeSheet = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // logoLbl
@@ -45,7 +46,7 @@
             // 
             // returnHomeButton
             // 
-            returnHomeButton.Location = new Point(506, 12);
+            returnHomeButton.Location = new Point(423, 9);
             returnHomeButton.Name = "returnHomeButton";
             returnHomeButton.Size = new Size(114, 29);
             returnHomeButton.TabIndex = 1;
@@ -53,11 +54,20 @@
             returnHomeButton.UseVisualStyleBackColor = true;
             returnHomeButton.Click += button1_Click;
             // 
+            // fLPRecipeSheet
+            // 
+            fLPRecipeSheet.AutoScroll = true;
+            fLPRecipeSheet.Location = new Point(12, 52);
+            fLPRecipeSheet.Name = "fLPRecipeSheet";
+            fLPRecipeSheet.Size = new Size(525, 710);
+            fLPRecipeSheet.TabIndex = 2;
+            // 
             // RecipeSheet
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(632, 450);
+            ClientSize = new Size(559, 789);
+            Controls.Add(fLPRecipeSheet);
             Controls.Add(returnHomeButton);
             Controls.Add(logoLbl);
             Name = "RecipeSheet";
@@ -70,5 +80,6 @@
 
         private Label logoLbl;
         private Button returnHomeButton;
+        private FlowLayoutPanel fLPRecipeSheet;
     }
 }
