@@ -27,7 +27,7 @@
 	* Step 4: Display recipes which descend in order of likeness to user fridge (recipe sort)
 	* Step 5: Implement same methods on static list
 ## Incomplete MVP tasks
-* Make recipe pathway 
+
 
 
 	
