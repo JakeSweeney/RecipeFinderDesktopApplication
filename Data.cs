@@ -34,26 +34,28 @@ namespace RecipeFinderPrototype
         
         public static void PresetListAddAll()
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Recipes.txt");
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Source\Recipes.txt");
             string allPresetRecipes = File.ReadAllText(path);
             string[] allRecipesSplitter = allPresetRecipes.Split("\n");
             foreach(string fullRecipe in allRecipesSplitter)
             {
-                string[] recipeComponents = fullRecipe.Split(",");
-                string[] recipeIngredientsArray = recipeComponents[2].Split("/");
-                string[] allergenArray = recipeComponents[3].Split("/");
-                Recipe currentRecipe = new Recipe(recipeComponents[0], recipeComponents[1], recipeComponents[4]);
-                foreach (string ingredient in recipeIngredientsArray)
+                if (!string.IsNullOrEmpty(fullRecipe))
                 {
-                    currentRecipe.AddIngredient(ingredient);
+                    string[] recipeComponents = fullRecipe.Split(",", StringSplitOptions.None);
+                    string[] recipeIngredientsArray = recipeComponents[2].Split("/");
+                    string[] allergenArray = recipeComponents[3].Split("/");
+                    Recipe currentRecipe = new Recipe(recipeComponents[0], recipeComponents[1], recipeComponents[4]);
+                    foreach (string ingredient in recipeIngredientsArray)
+                    {
+                        currentRecipe.AddIngredient(ingredient);
+                    }
+                    foreach (string allergen in allergenArray)
+                    {
+                        currentRecipe.AddAllergen(allergen);
+                    }
+                    presetRecipes.AddLast(currentRecipe);
                 }
-                foreach (string allergen in allergenArray)
-                {
-                   currentRecipe.AddAllergen(allergen);
-                }
-                presetRecipes.AddLast(currentRecipe);
             }
-            
         }
         
         public static void DisplayListAllergenFilter(LinkedList<string> userAllergens, LinkedList<Recipe> recipeList)

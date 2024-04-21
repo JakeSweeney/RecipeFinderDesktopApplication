@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Web.Http;
 using System.Web.Http.SelfHost;
 namespace RecipeFinderPrototype
@@ -13,8 +14,8 @@ namespace RecipeFinderPrototype
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new HomePage());
             Data.PresetListAddAll();
+            Application.Run(new HomePage());
         }
         
     }

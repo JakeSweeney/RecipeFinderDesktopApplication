@@ -19,13 +19,7 @@ namespace RecipeFinderPrototype
             InitializeComponent();
         }
         // credit to https://stackoverflow.com/questions/11365984/c-sharp-open-file-with-default-application-and-parameters
-        public void OpenWithDefaultProgram(string path)
-        {
-            using Process fileopener = new Process();
-            fileopener.StartInfo.FileName = "explorer";
-            fileopener.StartInfo.Arguments = path;
-            fileopener.Start();
-        }
+        
 
 
         private void customRecipeToolsButton_Click(object sender, EventArgs e)

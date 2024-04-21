@@ -102,6 +102,7 @@
             webLinkLabel.TabIndex = 5;
             webLinkLabel.TabStop = true;
             webLinkLabel.Text = "No weblink available.";
+            webLinkLabel.LinkClicked += webLinkLabel_LinkClicked;
             // 
             // label3
             // 

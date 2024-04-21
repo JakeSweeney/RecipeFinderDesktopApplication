@@ -255,6 +255,7 @@
             Controls.Add(logoLbl);
             Controls.Add(returnHomeButton);
             Name = "RecipePathway";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Recipe Pathway";
             taskStatusGroupBox.ResumeLayout(false);
             taskStatusGroupBox.PerformLayout();
