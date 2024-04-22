@@ -6,6 +6,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace RecipeFinderPrototype
 {
@@ -80,14 +81,32 @@ namespace RecipeFinderPrototype
                 }
             }
         }
-        public static void ListSort(LinkedList<Recipe> recipeList, LinkedList<string> userFridge)
+        public static void ListMatchSort(LinkedList<Recipe> recipeList, LinkedList<string> userFridge)
         {
+            
             if(recipeList.Count > 0)
             {
                 foreach(Recipe recipeIndex in recipeList)
                 {
-
+                    recipeIndex.Match = 0;
+                    foreach(string ingredient in recipeIndex.IngredientList)
+                    {
+                        if (userFridge.Contains(ingredient))
+                        {
+                            recipeIndex.Match++;
+                        }
+                    }
                 }
+                Recipe previousRecipe = null;
+                Recipe currentRecipe = recipeList.First();
+                LinkedList<Recipe> tempList = new LinkedList<Recipe>();
+                recipeList.ToList().Sort(delegate (Recipe recipe1, Recipe recipe2)
+                {
+                    return recipe1.Match.CompareTo(recipe2.Match);
+                });
+                tempList = recipeList;
+                displayRecipes.Clear();
+                displayRecipes = tempList;
             }
             else
             {

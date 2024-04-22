@@ -23,6 +23,7 @@ namespace RecipeFinderPrototype
         private LinkedList<float> ingredientQuantityList;
         private LinkedList<string> allergenList;
         private string webLink;
+        private int match;
 
         public string Name
         {
@@ -53,6 +54,12 @@ namespace RecipeFinderPrototype
         {
             get { return webLink; }
             set { webLink = value; }
+        }
+
+        public int Match
+        {
+            get { return match;}
+            set { match = value; }
         }
 
         public override string ToString()
