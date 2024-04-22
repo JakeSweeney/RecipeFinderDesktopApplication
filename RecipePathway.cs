@@ -34,6 +34,7 @@ namespace RecipeFinderPrototype
                 Data.displayRecipes.Clear();
                 foreach (Recipe currentRecipe in Data.CustomRecipes)
                 {
+                    currentRecipe.Match = 0;
                     Data.displayRecipes.AddLast(currentRecipe);
                 }
                 RecipeSheet recipeSheet = new RecipeSheet();
@@ -45,6 +46,7 @@ namespace RecipeFinderPrototype
                 Data.displayRecipes.Clear();
                 foreach (Recipe currentRecipe in Data.PresetRecipes)
                 {
+                    currentRecipe.Match = 0;
                     Data.displayRecipes.AddLast(currentRecipe);
                 }
                 RecipeSheet recipeSheet = new RecipeSheet();
@@ -89,7 +91,10 @@ namespace RecipeFinderPrototype
                     LinkedList<string> userFridge = new LinkedList<string>();
                     foreach (string ingredient in separatedIngredients)
                     {
-                        userFridge.AddLast(ingredient);
+                        if(ingredient != string.Empty)
+                        {
+                            userFridge.AddLast(ingredient);
+                        }
                     }
                     if (customRadioButton.Checked)
                     {
@@ -99,7 +104,12 @@ namespace RecipeFinderPrototype
                     {
                         Data.DisplayListAllergenFilter(userAllergens, Data.presetRecipes);
                     }
-                    Data.ListMatchSort(Data.displayRecipes, userFridge);
+                    LinkedList<Recipe> tempRecipeList = new LinkedList<Recipe>();
+                    foreach(Recipe currentRecipe in Data.displayRecipes)
+                    {
+                        tempRecipeList.AddLast(currentRecipe);
+                    }
+                    Data.ListMatchSort(tempRecipeList, userFridge);
                     RecipeSheet recipeSheet = new RecipeSheet();
                     recipeSheet.Show();
                     Close();

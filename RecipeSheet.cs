@@ -66,7 +66,7 @@ namespace RecipeFinderPrototype
                     }
                     if (recipe != null)
                     {
-                        fLPRecipeSheet.Controls.Add(new recipeDisplay() { Name = recipe.Name, Ingredients = ingredientBuffer, Region = recipe.Region, WebLink = recipe.WebLink, Allergens = allergenBuffer });
+                        fLPRecipeSheet.Controls.Add(new recipeDisplay() { Name = recipe.Name, Ingredients = ingredientBuffer, Region = recipe.Region, WebLink = recipe.WebLink, Allergens = allergenBuffer, Match = recipe.Match.ToString() });
                     }
                 }
             }

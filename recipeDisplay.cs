@@ -42,6 +42,11 @@ namespace RecipeFinderPrototype
             get { return allergenBox != null ? allergenBox.Text : string.Empty; }
             set { if (allergenBox != null) allergenBox.Text = value; }
         }
+        public string Match
+        {
+            get { return matchValueBox != null ?  matchValueBox.Text : string.Empty;}
+            set { if(matchValueBox!=null) matchValueBox.Text = value;}
+        }
         /*public void OpenWithDefaultProgram(string path)
         {
             using Process fileopener = new Process();

@@ -37,6 +37,8 @@
             label3 = new Label();
             regionLbl = new Label();
             regionTextBox = new TextBox();
+            label4 = new Label();
+            matchValueBox = new TextBox();
             SuspendLayout();
             // 
             // recipeNameBox
@@ -132,11 +134,31 @@
             regionTextBox.Size = new Size(373, 20);
             regionTextBox.TabIndex = 8;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(5, 356);
+            label4.Name = "label4";
+            label4.Size = new Size(228, 20);
+            label4.TabIndex = 9;
+            label4.Text = "Number of matching ingredients:";
+            // 
+            // matchValueBox
+            // 
+            matchValueBox.BackColor = SystemColors.ControlLight;
+            matchValueBox.BorderStyle = BorderStyle.None;
+            matchValueBox.Location = new Point(239, 356);
+            matchValueBox.Name = "matchValueBox";
+            matchValueBox.Size = new Size(125, 20);
+            matchValueBox.TabIndex = 10;
+            // 
             // recipeDisplay
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(matchValueBox);
+            Controls.Add(label4);
             Controls.Add(regionTextBox);
             Controls.Add(regionLbl);
             Controls.Add(label3);
@@ -147,7 +169,7 @@
             Controls.Add(label1);
             Controls.Add(recipeNameBox);
             Name = "recipeDisplay";
-            Size = new Size(510, 350);
+            Size = new Size(510, 392);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -163,5 +185,7 @@
         private Label label3;
         private Label regionLbl;
         private TextBox regionTextBox;
+        private Label label4;
+        private TextBox matchValueBox;
     }
 }

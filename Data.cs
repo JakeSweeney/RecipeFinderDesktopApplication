@@ -80,6 +80,14 @@ namespace RecipeFinderPrototype
                     displayRecipes.AddLast(currentRecipe);
                 }
             }
+            else
+            {
+                displayRecipes.Clear();
+                foreach(Recipe currentRecipe in recipeList)
+                {
+                    displayRecipes.AddLast(currentRecipe);
+                }
+            }
         }
         public static void ListMatchSort(LinkedList<Recipe> recipeList, LinkedList<string> userFridge)
         {
@@ -97,16 +105,21 @@ namespace RecipeFinderPrototype
                         }
                     }
                 }
-                Recipe previousRecipe = null;
-                Recipe currentRecipe = recipeList.First();
-                LinkedList<Recipe> tempList = new LinkedList<Recipe>();
-                recipeList.ToList().Sort(delegate (Recipe recipe1, Recipe recipe2)
+                List<Recipe> tempList = new List<Recipe>();
+                foreach(Recipe recipeIterator in recipeList)
+                {
+                    tempList.Add(recipeIterator);
+                }
+                tempList.Sort(delegate (Recipe recipe1, Recipe recipe2)
                 {
                     return recipe1.Match.CompareTo(recipe2.Match);
                 });
-                tempList = recipeList;
+                
                 displayRecipes.Clear();
-                displayRecipes = tempList;
+                foreach(Recipe recipe in tempList)
+                {
+                    displayRecipes.AddFirst(recipe);
+                }
             }
             else
             {
